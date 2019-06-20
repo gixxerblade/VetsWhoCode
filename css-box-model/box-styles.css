@@ -3,4 +3,12 @@ h1, p{
 }
 em, strong{
     background-color: #b2d6ff;
+    display: inline;
+}
+h1{
+    padding: 50px;
+    border: 1px solid #5d6063;
+}
+p{
+    padding: 20px 0 20px 10px; /*Top Right Bottom Left */
 }
