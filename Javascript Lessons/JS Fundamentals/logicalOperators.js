@@ -120,3 +120,20 @@ Hint: passing an empty input to a prompt returns an empty string ''.
 Pressing ESC during a prompt returns null.
 
  */
+var userName = prompt("Who's there?", "");
+
+if (userName == "Admin"){
+    var password = prompt("Password");
+    if (password == 'TheMaster') {
+        alert( 'Welcome!' );
+      } else if (password == '' || pass == null) {
+        alert( 'Canceled.' );
+      } else {
+        alert( 'Wrong password' );
+      }
+    
+    } else if (userName == '' || userName == null) {
+      alert( 'Canceled' );
+    } else {
+      alert( "I don't know you" );
+}
