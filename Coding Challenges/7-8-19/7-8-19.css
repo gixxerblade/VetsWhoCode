@@ -3,7 +3,7 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
-div.btn-3{
+div.container{
     padding: 20px;
     margin: auto;
     text-align: center;
@@ -14,7 +14,7 @@ div.btn-3{
     width: 300px;
     border: 1px solid;
 }
-div.btn-3:hover{
+div.container:hover{
     color: #F0E9E8;
 }
 .btn-1,.btn-2{
