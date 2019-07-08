@@ -45,7 +45,7 @@ for(i=1;i<=4;i++){
 /*****#7**** */
 for(i=1;i<4;i++){
     for(j=0;j<=4;j++){
-        console.log(j);
+        document.write('<p style="font-size:25px"><strong>' + j + '</strong></p><br>');
     }
 }
 
