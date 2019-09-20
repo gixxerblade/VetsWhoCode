@@ -19,4 +19,6 @@
 - #690de4 Electric Violet
 - #d6a342 Old Gold
 
+![Box-model](images/boxmodel.gif "Box Model")
+
 ![site-pallette screenshot using YouTube colors](images/site-pallette.JPG)
