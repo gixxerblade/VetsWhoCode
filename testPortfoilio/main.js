@@ -1,12 +1,12 @@
-const intro = document.getElementById('intro');
+/* const intro = document.getElementById('intro');
 const resume =document.getElementById('resume');
-const aboutme = document.getElementById('aboutme');
+const aboutme = document.getElementById('aboutme'); */
 
 
 //Stick Navbar
 window.onscroll = function() {
     stickyNavbar()
-};
+  };
 var navbar = document.getElementById('navbar');
 var sticky = navbar.offsetTop;
 function stickyNavbar() {
