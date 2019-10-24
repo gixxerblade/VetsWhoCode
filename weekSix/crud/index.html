@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Countries CRUD</title>
+    <script src="script.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+    <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+      <input type="text" id="add-name" placeholder="New country" />
+      <input type="submit" value="Add" class="addBtn" />
+    </form>
+
+    <div id="spoiler" role="aria-hidden">
+      <form action="javascript:void(0);" method="POST" id="saveEdit">
+        <input type="text" id="edit-name" />
+        <input type="submit" value="Edit" />
+        <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+      </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <div class="countryList">
+      <div class="name">Name</div>
+      <div id="countries"></div>
+    </div>
+  </div>
+  </body>
+</html>
