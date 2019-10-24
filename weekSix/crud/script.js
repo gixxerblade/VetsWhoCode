@@ -1,9 +1,9 @@
-var app = new function() {
+let app = new function() {
     this.element = document.getElementById('countries');
     this.countries = ['France', 'Germany', 'England', 'Spain', 'Belgium', 'Italy', 'Portugal', 'Irland', 'Luxembourg'];
     this.Count = function(data) {
-      var element   = document.getElementById('counter');
-      var name = 'country';
+      let element   = document.getElementById('counter');
+      let name = 'country';
       if (data) {
         if (data > 1) {
           name = 'countries';
@@ -15,7 +15,7 @@ var app = new function() {
     };
     
     this.FetchAll = function() {
-      var data = '';
+      let data = '';
       if (this.countries.length > 0) {
         for (i = 0; i < this.countries.length; i++) {
           data += '<section>';
@@ -31,7 +31,7 @@ var app = new function() {
     this.Add = function () {
       element = document.getElementById('add-name');
       // Get the value
-      var country = element.value;
+      let country = element.value;
       if (country) {
         // Add the new value
         this.countries.push(country.trim());
@@ -42,7 +42,7 @@ var app = new function() {
       }
     };
     this.Edit = function (item) {
-      var element = document.getElementById('edit-name');
+      let element = document.getElementById('edit-name');
       // Display value in the field
       element.value = this.countries[item];
       // Display fields
@@ -50,7 +50,7 @@ var app = new function() {
       self = this;
       document.getElementById('saveEdit').onsubmit = function() {
         // Get value
-        var country = element.value;
+        let country = element.value;
         if (country) {
           // Edit value
           self.countries.splice(item, 1, country.trim());
