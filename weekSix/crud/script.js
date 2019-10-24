@@ -1,16 +1,16 @@
 var app = new function() {
-    this.el = document.getElementById('countries');
+    this.element = document.getElementById('countries');
     this.countries = ['France', 'Germany', 'England', 'Spain', 'Belgium', 'Italy', 'Portugal', 'Irland', 'Luxembourg'];
     this.Count = function(data) {
-      var el   = document.getElementById('counter');
+      var element   = document.getElementById('counter');
       var name = 'country';
       if (data) {
         if (data > 1) {
           name = 'countries';
         }
-        el.innerHTML = data + ' ' + name ;
+        element.innerHTML = data + ' ' + name ;
       } else {
-        el.innerHTML = 'No ' + name;
+        element.innerHTML = 'No ' + name;
       }
     };
     
@@ -26,31 +26,31 @@ var app = new function() {
         }
       }
       this.Count(this.countries.length);
-      return this.el.innerHTML = data;
+      return this.element.innerHTML = data;
     };
     this.Add = function () {
-      el = document.getElementById('add-name');
+      element = document.getElementById('add-name');
       // Get the value
-      var country = el.value;
+      var country = element.value;
       if (country) {
         // Add the new value
         this.countries.push(country.trim());
         // Reset input value
-        el.value = '';
+        element.value = '';
         // Dislay the new list
         this.FetchAll();
       }
     };
     this.Edit = function (item) {
-      var el = document.getElementById('edit-name');
+      var element = document.getElementById('edit-name');
       // Display value in the field
-      el.value = this.countries[item];
+      element.value = this.countries[item];
       // Display fields
       document.getElementById('spoiler').style.display = 'block';
       self = this;
       document.getElementById('saveEdit').onsubmit = function() {
         // Get value
-        var country = el.value;
+        var country = element.value;
         if (country) {
           // Edit value
           self.countries.splice(item, 1, country.trim());
