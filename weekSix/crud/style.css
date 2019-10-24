@@ -65,9 +65,12 @@ section{
     grid-template-columns:1fr 1fr 1fr;
     border-bottom: black solid 1px;
     gap: 2px;
+
 }
 section.countryName{
     text-align: left;
+    transition: 1s ease-in;
+
 }
 .deleteBtn,
 .editBtn{
