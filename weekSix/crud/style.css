@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #181818;
+}
+body{
+    background: #E2E2E2;
+}
+input[type="submit"],
+button,
+[aria-label] {
+  cursor: pointer;
+}
+#spoiler {
+  display: none;
+}
+.container{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 100vh;
+}
+#add-name{
+    font-size: 1.25em;
+    border-style: none;
+    margin: 1em;
+    text-align: center;
+    height: 1.5em;
+    border-radius: 4px;
+}
+p#counter,
+.name{
+    padding: .5em;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+.countryList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.25em;
+    width: 100vh;
+}
+
+.countries{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    display: grid;
+    max-width: 100%;
+    padding: 5px;
+    grid-template-columns:1fr 1fr 1fr;
+    border-bottom: black solid 1px;
+    gap: 2px;
+}
+section.countryName{
+    text-align: left;
+}
+.deleteBtn,
+.editBtn{
+    text-align: right;
+}
+.addBtn,
+button{
+    width: 75px;
+    height: 1.5em;
+    background: #004745;
+    color: #ffffff;
+    border:none;
+    border-radius: 1em;
+}
+.addBtn:hover,
+button:hover{
+    background-color: #807c7c;
+    color: #dbd4d4;
+}
+.addBtn:active,
+button:active{
+    background-color: #FFFFFF;
+    color: #1B1B1B;
+}
