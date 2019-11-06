@@ -1,13 +1,14 @@
 const pickleObj = {
   imageUrl: [
-    "Pickle.jpg",
-    "BreadButterChips.jpg",
-    "oldfashioned_chow_chow_relish.jpg",
-    "angrypickle.jpg",
-    "Shiozuke-III.jpg",
-    "gherkinsjpg.jpg",
-    "easy-pickled-peppers-recipe-1.jpg"
+    "https://api.codetabs.com/v1/proxy?quest=https://i.ibb.co/4pbb5SX/Pickle.jpg",
+    "https://api.codetabs.com/v1/proxy?quest=https://i.ibb.co/PzTG5bR/Bread-Butter-Chips.jpg",
+    "https://api.codetabs.com/v1/proxy?quest=https://i.ibb.co/r5KpLk1/oldfashioned-chow-chow-relish.jpg",
+    "https://api.codetabs.com/v1/proxy?quest=https://i.ibb.co/WfWnRPR/angrypickle.jpg",
+    "https://api.codetabs.com/v1/proxy?quest=https://i.ibb.co/s13RgLX/Shiozuke-III.jpg",
+    "https://api.codetabs.com/v1/proxy?quest=https://i.ibb.co/THHs3ny/gherkinsjpg.jpg",
+    "https://api.codetabs.com/v1/proxy?quest=https://i.ibb.co/zNjSwtf/easy-pickled-peppers-recipe-1.jpg"
   ],
+
 
   name: [
     "Pickled Cucumber",
@@ -29,15 +30,44 @@ const pickleObj = {
     "Made in the same way as cucumber pickles, there are more than fifteen varieties of pickle peppers available, ranging from mild to hot, hot, hot. These are some of the most popular pickled peppers:\nJalapeno - Thanks to the growing interest in Mexican and southwestern foods, this type of pickled pepper is hot - literally. Fiery jalapenos are packed in brine and come whole or in rings.\nBanana Peppers - Long, shiny, yellow peppers that come both hot and sweet , and are banana-shaped. They're available whole or in rings. Cherry Peppers - Shaped like cherries, these pickled peppers are available in red or green and both hot or sweet versions. They're most popular whole or in rings.\nPepperoncini - These pickled peppers are available whole or as green Greek or Italian. Mildly hot, these peppers are popular in antipasto or Mediterranean-style salads."
   ]
 };
-
+let container = document.getElementById('container');
+let images = [];
+let name = [];
+let desc = [];
 async function fetchImages() {
-    let response = await fetch(pickleObj.imageUrl);
-    let myBlob = await response.blob();
-  
-    let objectURL = URL.createObjectURL(myBlob);
-    let image = document.createElement('img');
-    image.src = objectURL;
-    document.body.appendChild(image);
-  }
-  
- fetchImages();
+    for (const i of pickleObj.imageUrl){
+        await images[i];
+        images[i] = new Image();
+        images[i].src = i;
+        let imgEl  = document.createElement('img');
+        imgEl.setAttribute('id', 'i')
+        container.appendChild(images[i]);
+    }
+}
+
+let addName = () =>{
+    for (const i of pickleObj.name){
+        let h2 = document.createElement('h2');
+        let h2Content = document.createTextNode(i);
+        h2.appendChild(h2Content);
+        let img = document.querySelector('img');
+        container.insertBefore(h2, img);
+    }
+
+}
+let addDesc = () =>{
+    for (const i of pickleObj.description){
+        let pEl = document.createElement('p');
+        let pContent = document.createTextNode(i);
+        pEl.appendChild(pContent);
+        let img = document.querySelector('img');
+        container.insertBefore(pEl, img);
+
+    }
+}
+    fetchImages();
+    addName();
+    addDesc();
+
+    
+    
