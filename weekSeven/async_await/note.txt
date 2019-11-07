@@ -1,0 +1,9 @@
+/* getRecipes().then(dataString = () =>{
+  for(let i = 0; i < data.hits.length; i++){
+    const h3 = document.createElement('h3');
+/*     h3.innerHTML = 
+ */    console.log(data.hits[i].recipe.label);
+/*     container.appendChild(h3);
+ */  }
+
+}).catch; */
