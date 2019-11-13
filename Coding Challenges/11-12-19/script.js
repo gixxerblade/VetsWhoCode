@@ -13,8 +13,8 @@ let output = document.getElementById("output");
 let palinCheck = () => {
   //palindrome input to a string
   let palindrome = document.getElementById("input-text").value;
-
-  let palindromeString = palindrome.split("");
+  palindromeStripped = palindrome.replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase();
+  let palindromeString = palindromeStripped.split("");
   //Make palindrome an array then reverse it.
   let palindromeToReverseArray = palindromeString.reverse();
   //If the palindrome has a space in it, this function removes it.
@@ -24,7 +24,7 @@ let palinCheck = () => {
 
   //Takes the array without empty elements then joins it to a new string.
   let newReverseString = reverseArrLessSpaces.join("");
-  let palindromeToArr = Array.from(palindrome);
+  let palindromeToArr = Array.from(palindromeStripped);
   let palindromeToArrLessSpaces = palindromeToArr.filter(function(e) {
     return e !== " ";
   });
